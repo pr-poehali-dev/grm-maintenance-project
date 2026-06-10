@@ -268,6 +268,16 @@ export default function Index() {
             ))}
           </div>
 
+          <div className="mt-6 aspect-video w-full">
+            <iframe
+              src="https://rutube.ru/play/embed/37603ccbbf2626762435aaff5552cb60"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="clipboard-write; autoplay"
+              allowFullScreen
+            />
+          </div>
+
           <div className="mt-8 bg-foreground text-background p-6 md:p-8">
             <div className="flex items-start gap-4">
               <Icon name="AlertTriangle" size={20} className="shrink-0 mt-0.5" style={{ color: "hsl(16, 85%, 65%)" } as React.CSSProperties} />
