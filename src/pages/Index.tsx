@@ -221,18 +221,29 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="hidden md:grid grid-cols-2 gap-4">
-            {[
-              { num: "15+", label: "лет опыта" },
-              { num: "2 000+", label: "выполненных ТО" },
-              { num: "100%", label: "гарантия качества" },
-              { num: "1 день", label: "срок выполнения" },
-            ].map((s) => (
-              <div key={s.num} className="bg-card border border-border p-6 card-hover">
-                <div className="text-3xl font-bold mb-1" style={{ fontFamily: "'Oswald', sans-serif", color: "hsl(16, 85%, 50%)" }}>{s.num}</div>
-                <div className="text-sm text-muted-foreground">{s.label}</div>
-              </div>
-            ))}
+          <div className="hidden md:flex flex-col gap-4">
+            <div className="relative overflow-hidden" style={{ height: "220px" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/3791681c-ec10-42dc-b4c9-1b9d60798cbf/files/d82f20c7-e744-4ef0-90db-fcc5435a46a8.jpg"
+                alt="Замена ремня ГРМ"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)" }} />
+              <span className="absolute bottom-3 left-4 text-white text-xs font-medium uppercase tracking-widest">Замена ремня ГРМ</span>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { num: "15+", label: "лет опыта" },
+                { num: "2 000+", label: "выполненных ТО" },
+                { num: "100%", label: "гарантия" },
+                { num: "1 день", label: "срок работ" },
+              ].map((s) => (
+                <div key={s.num} className="bg-card border border-border p-4 card-hover">
+                  <div className="text-2xl font-bold mb-1" style={{ fontFamily: "'Oswald', sans-serif", color: "hsl(16, 85%, 50%)" }}>{s.num}</div>
+                  <div className="text-xs text-muted-foreground">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -301,6 +312,27 @@ export default function Index() {
           <p className="text-muted-foreground mb-12 max-w-xl">
             Все виды работ выполняются с применением специализированного оборудования и фирменного инструмента.
           </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="relative overflow-hidden" style={{ height: "200px" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/3791681c-ec10-42dc-b4c9-1b9d60798cbf/files/29ee7027-923f-469a-a106-3519e50bfbec.jpg"
+                alt="Регулировка клапанов"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%)" }} />
+              <span className="absolute bottom-3 left-4 text-white text-xs font-medium uppercase tracking-widest">Регулировка клапанов</span>
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "200px" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/3791681c-ec10-42dc-b4c9-1b9d60798cbf/files/5f37252e-0dfd-4bf2-a3c1-8834dd755aaa.jpg"
+                alt="Диагностика двигателя"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%)" }} />
+              <span className="absolute bottom-3 left-4 text-white text-xs font-medium uppercase tracking-widest">Диагностика двигателя</span>
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {SERVICES.map((s, i) => (
